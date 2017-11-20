@@ -1,5 +1,7 @@
-def leap_year(year):
-    """ this program will gives the output whether the input is leap year or not """
+""" this program will gives the output whether the input is leap year or not """
+
+def leap_year():
+    year = int(input("please enter the year = "))
     if year % 4 != 0:
         print(year, "is not leap year")
     elif year % 100 == 0:
@@ -11,10 +13,4 @@ def leap_year(year):
         print(year, "is leap year")
 
 
-while True:
-    inp_year = input("please enter the year = ")
-    if inp_year == 'done':
-        break
-    else:
-        year = int(inp_year)
-        leap_year(year)
+leap_year()
