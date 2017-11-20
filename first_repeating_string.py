@@ -1,6 +1,7 @@
-inp = input('plase enter the string: ')
+""" this program gives the output which is first repeated string """
 
-def first_rep1(inp):
+def first_rep1():
+    inp = input('plase enter the string: ')
     l = list(inp)
     for i in range(len(l)):
         x = l[i]
@@ -13,10 +14,9 @@ def first_rep1(inp):
     else:
         return None
 
-print(first_rep1(inp))
 
-
-def first_rep2(inp):
+def first_rep2():
+    inp = input('plase enter the string: ')
     d = {}
     for i in inp:
         if i not in d:
@@ -24,10 +24,7 @@ def first_rep2(inp):
         else:
             return i
 
-print(first_rep2(inp))
 
-
-def first_rep3(inp):
+def first_rep3():
+    inp = input('plase enter the string: ')
     return [char for char in inp if inp.count(char) > 1][0]
-
-print(first_rep3(inp))
