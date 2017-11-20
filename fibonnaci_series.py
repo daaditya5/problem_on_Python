@@ -1,13 +1,15 @@
-def fibennaci(inp):
-    """ This program will gives the fibennaci series up to nth(inp) term """
+""" This program will gives the fibonnaci series up to nth(inp) term """
+
+def fib1():
+    inp = int(input("please enter the number = "))
     l = []
     if inp == 0:
         l.append(inp)
-        print(inp,'th term is', l)
+        print(l)
     elif inp == 1:
         l = [0]
         l.append(inp)
-        print(inp,'th term is', l)
+        print(l)
     elif inp > 1:
         l = [0, 1]
         a = 0
@@ -20,10 +22,11 @@ def fibennaci(inp):
             inp -= 1
         print(l)
 
-while True:
-    inp = input("please enter the nth term = ")
-    if inp == 'done':
-        break
-    else:
-        inp = int(inp)
-        fibennaci(inp)
+def fib2():
+    inp = int(input("please enter the number = "))
+    a, b = 0, 1; l = []
+    for i in range(0, inp):
+        l.append(a)
+        a, b = b, a+b
+    print(l)
+
